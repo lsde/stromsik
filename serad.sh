@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 feh --bg-scale ~/win4.png
 
