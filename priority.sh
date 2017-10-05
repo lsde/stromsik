@@ -10,7 +10,7 @@ TEXT=`zenity --forms --text="Co děláte v případě nezaměstnanosti. Seřaďt
 --add-entry="Koupit si psa." \
 --add-entry="Přihlásit se do rekvalifikačního kurzu Úvod do práce s PC." \
 --add-entry="Volný čas věnovat aktivněji ve prospěch Spolku ochranářů velryb." \
---add-entry="Peníze" --width=820 --height=480`
+--width=820 --height=480`
 
 case $? in
     0)
