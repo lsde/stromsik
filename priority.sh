@@ -1,6 +1,8 @@
 #!/bin/bash
+cd `dirname $0`
 
-feh --bg-scale ~/win4.png
+./vnc.sh  stop
+feh --bg-scale resources/win4.png
 
 TEXT=`zenity --forms --text="Co děláte v případě nezaměstnanosti. Seřaďte následující úkony podle důležitosti. 1-7" \
 --add-entry="Přihlásit se na Úřadu práce." \
@@ -14,11 +16,12 @@ TEXT=`zenity --forms --text="Co děláte v případě nezaměstnanosti. Seřaďt
 
 case $? in
     0)
-	aplay ~/pincl.wav
-	feh --bg-scale ~/win3.png
+	aplay resources/pincl.wav
+	feh --bg-scale resources/win3.png
 	;;
     *)
-	aplay ~/vrr.wav
+	aplay resources/vrr.wav
 	$0
 	;;
 esac
+./vnc.sh start

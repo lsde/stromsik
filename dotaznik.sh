@@ -1,18 +1,40 @@
 #!/bin/bash
+cd `dirname $0`
 
-FILE=`dirname $0`/dotaznik.html
+feh --bg-scale resources/win5.png
 
-feh --bg-scale ~/win5.png
+while true; do
+zenity  --list  --text "Počítač je jako..." --radiolist  --column "Vyber" --column "Možnost" \
+	FALSE "pes" \
+	FALSE "přítel" \
+	FALSE "dobrý sluha ale zlý pán" \
+	FALSE "nepřítel" && break
+done
 
-TEXT=`zenity --text-info --title="Dotazník" --filename=$FILE --html --width=820 --height=480`
+while true; do
+zenity  --list  --text "Vzal bych počítač..." --radiolist  --column "Vyber" --column "Možnost" \
+	FALSE "na koupaliště" \
+	FALSE "na kopanou" \
+	FALSE "do mlékárny" \
+	FALSE "do práce" && break
+done
 
-case $? in
-    0)
-	aplay ~/pincl.wav
-	feh --bg-scale ~/win3.png
-	;;
-    *)
-	aplay ~/vrr.wav
-	$0
-	;;
-esac
+while true; do
+zenity  --list  --text "Počítače pochází.." --radiolist  --column "Vyber" --column "Možnost" \
+	FALSE "z Asie" \
+	FALSE "z Číny" \
+	FALSE "z Tibetu" \
+	FALSE "z Říma" && break
+done
+
+while true; do
+zenity  --list  --text "Zvládnutí počítače" --radiolist  --column "Vyber" --column "Možnost" \
+	FALSE "omezuje pocit samoty" \
+	FALSE "zvyšuje sebevědomí" \
+	FALSE "vyžaduje spoustu sebeobětování" \
+	FALSE "je nemožné" && break
+done
+
+aplay resources/pincl.wav
+feh --bg-scale resources/win3.png
+

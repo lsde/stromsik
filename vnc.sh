@@ -1,13 +1,14 @@
 #!/bin/bash
+cd `dirname $0`
 
-feh --bg-scale ~/win3.png
+feh --bg-scale resources/win3.png
 
 function start {
 	vncviewer 192.168.1.31 -FullScreen -FullColor -ViewOnly -Shared -UseLocalCursor
 }
 
 function stop {
-	killall vncviewer
+	pkill -f vncviewer
 }
 
 case $1 in

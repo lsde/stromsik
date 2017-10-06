@@ -1,15 +1,16 @@
 #!/bin/bash
+cd `dirname $0`
 
-feh --bg-scale ~/win3.png
+feh --bg-scale resources/win3.png
 
 function start {
 	x11vnc -forever -shared -scale 1024x768 -cursor arrow &
-	xpdf -fullscreen ~/stromsik_prezentace.pdf
+	xpdf -fullscreen resources/stromsik_prezentace.pdf
 }
 
 function stop {
-	killall x11vnc
-	killall xpdf.real
+	pkill -f x11vnc
+	pkill -f xpdf
 }
 
 case $1 in
