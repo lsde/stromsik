@@ -10,6 +10,7 @@ zenity  --list  --text "Počítač je jako..." --radiolist  --column "Vyber" --c
 	FALSE "dobrý sluha ale zlý pán" \
 	FALSE "nepřítel" && break
 done
+aplay `find resources/ukol1/*.wav|sort -R|head -1`
 
 while true; do
 zenity  --list  --text "Vzal bych počítač..." --radiolist  --column "Vyber" --column "Možnost" \
@@ -18,6 +19,7 @@ zenity  --list  --text "Vzal bych počítač..." --radiolist  --column "Vyber" -
 	FALSE "do mlékárny" \
 	FALSE "do práce" && break
 done
+aplay `find resources/ukol1/*.wav|sort -R|head -1`
 
 while true; do
 zenity  --list  --text "Počítače pochází.." --radiolist  --column "Vyber" --column "Možnost" \
@@ -26,6 +28,7 @@ zenity  --list  --text "Počítače pochází.." --radiolist  --column "Vyber" -
 	FALSE "z Tibetu" \
 	FALSE "z Říma" && break
 done
+aplay `find resources/ukol1/*.wav|sort -R|head -1`
 
 while true; do
 zenity  --list  --text "Zvládnutí počítače" --radiolist  --column "Vyber" --column "Možnost" \
@@ -34,7 +37,7 @@ zenity  --list  --text "Zvládnutí počítače" --radiolist  --column "Vyber" -
 	FALSE "vyžaduje spoustu sebeobětování" \
 	FALSE "je nemožné" && break
 done
+aplay `find resources/ukol1/*.wav|sort -R|head -1`
 
-aplay resources/pincl.wav
 feh --bg-scale resources/win3.png
 

@@ -3,4 +3,4 @@ xset -dpms
 xset s noblank
 setxkbmap -option srvrkeys:none
 amixer set PCM 100%
-feh --bg-scale ~/win3.png &
+feh --bg-scale ~/resources/win3.png &

@@ -4,7 +4,7 @@ cd `dirname $0`
 feh --bg-scale resources/win3.png
 
 function start {
-	vncviewer 192.168.1.31 -FullScreen -FullColor -ViewOnly -Shared -UseLocalCursor
+	vncviewer 192.168.1.35 -FullScreen -FullColor -ViewOnly -Shared -UseLocalCursor
 }
 
 function stop {

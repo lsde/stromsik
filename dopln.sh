@@ -1,6 +1,7 @@
 #!/bin/bash
 cd `dirname $0`
 
+./vnc.sh  stop
 feh --bg-scale resources/win4.png
 
 QUESTION_A="a) V období nezaměstananosti jsem si uvědomil"
@@ -32,5 +33,5 @@ $QUESTION_C $ANSWER_C
 $QUESTION_DA $(echo $ANSWER_D|cut -d "|" -f1) $QUESTION_DB $(echo $ANSWER_D|cut -d "|" -f2)
 $QUESTION_E $ANSWER_E" | zenity --text-info
 
-aplay resources/pincl.wav
+aplay `find resources/ukol3/*.wav|sort -R|head -1`
 feh --bg-scale resources/win3.png
